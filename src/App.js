@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import "./index.css";
 import socketIo from "socket.io-client";
-import TicTacToe from './TicTacToe';
+import TicTacToe from "./TicTacToe";
+import "./styles/room.css";
 
 const createRoomUrl = "http://localhost:5000/create-room";
 const socket = socketIo("http://localhost:5000");
@@ -29,38 +30,43 @@ const App = () => {
 
     const joinRoom = (event) => {
         event.preventDefault();
-        socket.emit('join-room', {username, roomId});
-    }
+        socket.emit("join-room", { username, roomId });
+    };
 
     useEffect(() => {
-        socket.on('room-data', (_room) => {
+        socket.on("room-data", (_room) => {
             console.log(_room);
             setRoom(_room);
-        })
+        });
     }, []);
 
     return (
         <div className="container">
             {room === null ? (
-                <form>
-                    <input
-                        type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={(event) => setUsername(event.target.value)}
-                    />
-                    <button onClick={createRoom}>Create Room</button>
-                    <p>OR</p>
-                    <input
-                        type="text"
-                        placeholder="Room ID"
-                        value={roomId}
-                        onChange={(event) => setRoomId(event.target.value)}
-                    />
-                    <button onClick={joinRoom}>Join Room</button>
-                </form>
+                <div className="form-container">
+                    <form className='room-creation'>
+                        <h1>TicTacToe</h1>
+                        <input
+                            type="text"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(event) =>
+                                setUsername(event.target.value)
+                            }
+                        />
+                        <button onClick={createRoom}>Create Room</button>
+                        <hr color='lightgreen'/>
+                        <input
+                            type="text"
+                            placeholder="Room ID"
+                            value={roomId}
+                            onChange={(event) => setRoomId(event.target.value)}
+                        />
+                        <button onClick={joinRoom}>Join Room</button>
+                    </form>
+                </div>
             ) : (
-                <TicTacToe room={room} socket={socket}/>
+                <TicTacToe room={room} socket={socket} />
             )}
         </div>
     );
