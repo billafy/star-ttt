@@ -45,7 +45,8 @@ const App = () => {
             {room === null ? (
                 <div className="form-container">
                     <form className='room-creation'>
-                        <h1>TicTacToe</h1>
+                        <title><h1>TicTacToe</h1></title>
+                         <div className="underline"/><br/>
                         <input
                             type="text"
                             placeholder="Username"
