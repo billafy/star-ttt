@@ -1,0 +1,42 @@
+.tic-tac-toe {
+	background: #1A1B1C;
+	color: #fff;
+	padding: 2rem 0px;
+	margin: 1rem auto;
+	width: 1200px;
+	max-width: 95%;
+	text-align: center;
+}
+.tic-tac-toe span {
+	background: lightgreen;
+	color: #1A1B1C;
+	padding: 0.25rem;
+}
+.board {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.board-row {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+.board-cell {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	transition: 0.5s all ease;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+}
+.board-cell svg {
+	font-size: 5rem;
+}
+.board-cell:hover {
+	transform: scale(1.05);
+}

@@ -1,7 +1,7 @@
-body{
-	font-family:   -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-	background-image: url("./background.jpg");
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	background-image: url("../background.jpg");
 }
 .form-container {
 	display: flex;
@@ -13,7 +13,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: #1A1B1C;
+	background: #1a1b1c;
 	width: 300px;
 	max-width: 90%;
 	margin: 3rem auto;
@@ -27,7 +27,7 @@ body{
 	text-shadow: 0px 0px 10px black;
 }
 .room-creation input {
-	background: #1A1B1C;
+	background: #1a1b1c;
 	height: 35px;
 	width: 80%;
 	border: 2px solid transparent;
@@ -56,13 +56,13 @@ body{
 }
 .underline {
 	width: 10rem;
-        height: 0.25rem;
-        background: rgb(11, 12, 12);
-        margin-left: auto;
-        margin-right: auto;
+	height: 0.25rem;
+	background: lightgreen;
+	margin-left: auto;
+	margin-right: auto;
 }
-.title{
-         color: #0b0f0b;
-         font-size: 35px;
-         text-shadow: 0px 0px 2px black;
+.title {
+	color: #0b0f0b;
+	font-size: 35px;
+	text-shadow: 0px 0px 2px black;
 }

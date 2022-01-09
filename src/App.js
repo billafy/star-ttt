@@ -44,9 +44,10 @@ const App = () => {
         <div className="container">
             {room === null ? (
                 <div className="form-container">
-                    <form className='room-creation'>
-                        <title><h1>TicTacToe</h1></title>
-                         <div className="underline"/><br/>
+                    <form className="room-creation">
+                        <h1>TicTacToe</h1>
+                        <div className="underline"></div>
+                        <br />
                         <input
                             type="text"
                             placeholder="Username"
@@ -56,7 +57,7 @@ const App = () => {
                             }
                         />
                         <button onClick={createRoom}>Create Room</button>
-                        <hr color='lightgreen'/>
+                        <hr color="lightgreen" />
                         <input
                             type="text"
                             placeholder="Room ID"
@@ -67,7 +68,7 @@ const App = () => {
                     </form>
                 </div>
             ) : (
-                <TicTacToe room={room} socket={socket} />
+                <TicTacToe room={room} socket={socket} username={username}/>
             )}
         </div>
     );
