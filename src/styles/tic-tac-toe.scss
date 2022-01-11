@@ -1,0 +1,86 @@
+.tic-tac-toe {
+	background: #1a1b1c;
+	color: #fff;
+	padding: 2rem 0px;
+	margin: 1rem auto;
+	width: 600px;
+	max-width: 95%;
+	text-align: center;
+	span {
+		background: lightgreen;
+		color: #1a1b1c;
+		padding: 0.25rem;
+	}
+	.player-username {
+		display: flex;
+		width: 350px;
+		max-width: 95%;
+		margin: auto;
+		.player {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			p {
+				padding: 0.25rem;
+				color: #1a1b1c;
+				background: lightgreen;
+			}
+			span {
+				color: white;
+				background: transparent;
+				font-weight: bold;
+				font-size: 1.25rem;
+			}
+		}
+		.player2 {
+			margin-left: auto;
+			flex-direction: row-reverse;
+		}
+	}
+	.game-result {
+		margin: 0px;
+		color: lightgreen;
+	}
+	.play-again {
+		background: lightgreen;
+		height: 35px;
+		border-radius: 9999px;
+		padding: 0px 1rem;
+		border: 2px solid transparent;
+		transition: 0.5s all ease;
+		margin: 1rem 0px;
+		&:hover {
+			border-color: lightgreen;
+			background: transparent;
+			color: lightgreen;
+		}
+	}
+	.board {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.5rem;
+		.board-row {
+			display: flex;
+			justify-content: center;
+			gap: 0.5rem;
+			.board-cell {
+				width: 100px;
+				height: 100px;
+				cursor: pointer;
+				transition: 0.5s all ease;
+				background: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: black;
+				svg {
+					font-size: 5rem;
+				}
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+}
